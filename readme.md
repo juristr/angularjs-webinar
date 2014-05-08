@@ -23,6 +23,9 @@ als script in index.html eingebunden
 
 **Directives:** selbstdefiniertes HTML element. Sollte damit sparsam umgehen. `ng-controller` usw sind von Angular zur verfügung gestellte Direktiven
 
+## Links
+
+- https://docs.angularjs.org/api/ng/service
 
 ## Fragen
 

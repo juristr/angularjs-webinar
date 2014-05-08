@@ -1,6 +1,9 @@
 angular.module('myApp')
 
-    .controller('CalculatorController', [ '$scope', 'calculator' /* give me reference of service (DI) */], function($scope, calculator){
+    // Angular provided dependencies should be prefixed by `$`
+    .controller('CalculatorController', [ '$scope', '$log', 'calculator' /* give me reference of service (DI) */], function($scope, $log, calculator){
+        $log.info('Calculator service started'); //wraps console.log initially
+
         $scope.articles = [
             { title: 'Red Bull', price: 2.5},
             { title: 'Monster', price: 3.5},
