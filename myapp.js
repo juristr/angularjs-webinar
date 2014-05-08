@@ -1,1 +1,3 @@
-angular.module('myApp', []);
+angular.module('myApp', [
+        /* eventually load external modules */
+    ]);
