@@ -1,6 +1,12 @@
 <html ng-app="myApp">
 
 <head>
+    <!-- 
+        load jQuery before angular. In that case Angular will
+        recognize it is present and use it instead of its
+        jquery.lite module.
+    -->
+    <!--<script src="jquery.js"></script>-->
     <script src="angular.js"></script>
     <script src="myApp.js"></script>
     
