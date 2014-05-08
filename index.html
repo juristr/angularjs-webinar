@@ -1,0 +1,43 @@
+<html ng-app>
+
+<head>
+    <script src="angular.js"></script>
+    <script src="myApp.js"></script>
+    <script src="CalculatorController.js"></script>
+    <script src="CalculatorService.js"></script>
+    <script src="reverseFilter.js"></script>
+</head>
+<body ng-controller="CalculatorController">
+    <div>
+        <input ng-model="first" />
+        <input ng-model="second" />
+        <button ng-click="add(first, second)">=</button>
+        <span>{{sum}}</span>
+    </div>
+    <div>
+        <!-- | symbolisiert filter. -->
+        Reversed: {{sum | reverse | currency: '€' }}
+    </div>
+    <div>
+        <input ng-model="query.title" />
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+            </tr>
+            <!-- 
+                "ng-repeat" for looping.
+
+                Bei der "filter" instruktion keine "" da es sich
+                um die Variable handelt und nicht um einen String.
+
+            -->
+            <tr ng-repeat="article in articles | filter:query | orderBy:'title'">
+                <td>{{article.title}}</td>
+                <td>{{article.price | currency: '€' }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
