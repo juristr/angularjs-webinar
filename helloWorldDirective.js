@@ -10,6 +10,7 @@ angular.module('myApp')
     .directive('helloWorld', function(){
         return {
             restrict: 'E', //E=Element, A=attribute, C=css class or combined EAC
-            template: '<div style="background-color:red;font-size:24pt">Hallo Welt!</div>'
+            //template: '<p>..</p>',
+            templateUrl: 'helloWorldPartial.html'
         }
     });
