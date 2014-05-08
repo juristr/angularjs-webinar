@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('calculator')
 
     // Angular provided dependencies should be prefixed by `$`
     .controller('CalculatorController', [ '$scope', '$log', 'calculator' /* give me reference of service (DI) */], function($scope, $log, calculator){

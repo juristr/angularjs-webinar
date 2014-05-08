@@ -1,6 +1,6 @@
 // Services: https://docs.angularjs.org/api/ng/service
 
-angular.module('myApp.calculator')
+angular.module('calculator')
     
     // gibt 3 Wege, dies ist der "mittlere"
     // Dies ist eine Factory function welche den service

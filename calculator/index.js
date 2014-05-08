@@ -1,1 +1,1 @@
-angular.module('myapp.calculator');
+angular.module('calculator', []);
