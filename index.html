@@ -19,39 +19,22 @@
     <script src="./calculator/index.js"></script>
     <script src="./calculator/calculatorController.js"></script>
     <script src="./calculator/calculatorService.js"></script>
+
+    <script type="text/javascript">
+      angular.module('myApp')
+        .controller('MyController', ['$scope', function($scope){
+          $scope.welcomeMessage = 'Hi, welcome to the Angular tutorial';
+
+          $scope.sayHello = function(name){
+            alert('Hi ' + name);
+          };
+        }]);
+    </script>
+
 </head>
-<body ng-controller="CalculatorController">
-    <hello-world></hello-world>
-    <div>
-        <input ng-model="first" />
-        <input ng-model="second" />
-        <button ng-click="add(first, second)">=</button>
-        <span>{{ sum }}</span>
-    </div>
-    <div>
-        <!-- | symbolisiert filter. -->
-        Reversed: {{ sum | currency: '€' }}
-    </div>
-    <div>
-        <input ng-model="query" />
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Price</th>
-            </tr>
-            <!--
-                "ng-repeat" for looping.
-
-                Bei der "filter" instruktion keine "" da es sich
-                um die Variable handelt und nicht um einen String.
-
-            -->
-            <tr ng-repeat="article in articles | filter:query | orderBy:'title'">
-                <td>{{article.title}}</td>
-                <td>{{article.price | currency: '€' }}</td>
-            </tr>
-        </table>
-    </div>
+<body ng-controller="MyController">
+  <input type="text" ng-model="name" />
+  <button ng-click="sayHello(name)">Say Hello</button>
 </body>
 
 </html>

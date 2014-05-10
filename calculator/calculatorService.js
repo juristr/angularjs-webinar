@@ -2,14 +2,14 @@
 
 angular.module('calculator')
 
-    // gibt 3 Wege, dies ist der "mittlere"
-    // Dies ist eine Factory function welche den service
-    // returned
+    // There are different ways of creating services. The factory
+    // is one of them.
     //
-    // Ein service ist ein singleton und dementsprechend sollte kein
-    // status im service gespeichert werden
+    // A service is a **singleton**.
     //
-    // Der name 'calculator' ist der name mit welchem er referenziert wird
+    // `calculator` is the name that uniquely identifies the service
+    // in the application. This name is used by the DI mechanism to inject
+    // it into other components.
     .factory('calculator', [ '$http', '$log', function($http, $log){
         // $http is the backend service for loading json stuff
         // https://docs.angularjs.org/api/ng/service/$http

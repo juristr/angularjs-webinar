@@ -1,12 +1,13 @@
 /*
-    Directiven sollten sparsam verwendet werden. `ng-controller`
-    sind auch directiven, welche aber von AngularJS direkt schon zur
-    Verfügung gestellt werden.
+    Directives allow to create re-usable components that augment the HTML
+    code with new elements or augment existing ones with new attributes.
 
+    Also `ng-controller` is a directive, just that it is provided by Angular
+    itself.
  */
 angular.module('myApp')
 
-    // "helloworld" entspricht dem HTML tag.
+    // "hello-world" would be the corresponding tag (see index.html)
     .directive('helloWorld', function(){
         return {
             restrict: 'E', //E=Element, A=attribute, C=css class or combined EAC

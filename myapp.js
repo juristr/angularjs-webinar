@@ -1,6 +1,6 @@
-angular.module('myApp', [
-        /* eventually load external modules */
+// the angular application definition.
 
-        /* internal dependencies */
+angular.module('myApp', [
+        // load dependencies here
         'calculator'
     ]);
