@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 
+    <!--
         load jQuery before angular. In that case Angular will
         recognize it is present and use it instead of its
         jquery.lite module.
@@ -12,7 +12,7 @@
     <!--<script src="./libs/angular/angular.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
 
-    <script src="myApp.js"></script>    
+    <script src="myApp.js"></script>
     <script src="reverseFilter.js"></script>
     <script src="helloWorldDirective.js"></script>
 
@@ -20,7 +20,7 @@
     <script src="./calculator/calculatorController.js"></script>
     <script src="./calculator/calculatorService.js"></script>
 </head>
-<body ng-controller="calculator.CalculatorController">
+<body ng-controller="CalculatorController">
     <hello-world></hello-world>
     <div>
         <input ng-model="first" />
@@ -30,7 +30,7 @@
     </div>
     <div>
         <!-- | symbolisiert filter. -->
-        Reversed: {{ sum | reverse | currency: '€' }}
+        Reversed: {{ sum | currency: '€' }}
     </div>
     <div>
         <input ng-model="query" />
@@ -39,7 +39,7 @@
                 <th>Title</th>
                 <th>Price</th>
             </tr>
-            <!-- 
+            <!--
                 "ng-repeat" for looping.
 
                 Bei der "filter" instruktion keine "" da es sich
