@@ -2,7 +2,6 @@ Angular JS - Webinar
 ---
 
 Speaker: [@GoloRoden](http://twitter.com/GoldenRoden)  
-http://www.heise.de/developer/the-next-big-thing-1790061.html  
 
 ---
 
